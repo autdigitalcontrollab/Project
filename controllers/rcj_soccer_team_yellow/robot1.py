@@ -38,18 +38,4 @@ class MyRobot1(RCJSoccerRobot):
                 # Compute the speed for motors
                 direction = utils.get_direction(ball_data["direction"])
 
-                # If the robot has the ball right in front of it, go forward,
-                # rotate otherwise
-                if direction == 0:
-                    left_speed = 7
-                    right_speed = 7
-                else:
-                    left_speed = direction * 4
-                    right_speed = direction * -4
-
-                # Set the speed to motors
-                self.left_motor.setVelocity(left_speed)
-                self.right_motor.setVelocity(right_speed)
-
-                # Send message to team robots
-                self.send_data_to_team(self.player_id)
+                # Write scripts of the robot here
